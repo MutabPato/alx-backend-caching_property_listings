@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    db:
+      image: postgres:latest
+      container_name: postgres_db
+      ports:
+        - "5432:5432"
+      environment:
+        - POSTGRES_USER: ${DB_USER}
+        - POSTGRES_PASSWORD: ${DB_PASSWORD}
+        - POSTGRES_DB: ${DB_NAME}
+      env_file:
+        - .env
+      volumes:
+        - db_data:/var/lib/postgresql/data
+    Redis:
+      image: redis:latest
+      container_name: 
+      ports:
+        - "6379:6379"
+      volumes:
+        - redis_data:/data
+volumes:
+  db_data:
+  redis_data:
