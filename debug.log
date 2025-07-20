@@ -1,0 +1,14 @@
+INFO 2025-07-20 13:17:34,352 autoreload Watching for file changes with StatReloader
+INFO 2025-07-20 13:18:21,669 autoreload /code/properties/utils.py changed, reloading.
+INFO 2025-07-20 13:18:22,116 autoreload Watching for file changes with StatReloader
+INFO 2025-07-20 13:25:55,668 autoreload /code/properties/utils.py changed, reloading.
+INFO 2025-07-20 13:25:56,150 autoreload Watching for file changes with StatReloader
+INFO 2025-07-20 13:25:59,527 autoreload /code/properties/utils.py changed, reloading.
+INFO 2025-07-20 13:25:59,978 autoreload Watching for file changes with StatReloader
+INFO 2025-07-20 13:26:13,945 basehttp "GET /api/property-list/ HTTP/1.1" 200 1051
+WARNING 2025-07-20 13:26:14,055 basehttp "GET /favicon.ico HTTP/1.1" 404 2386
+WARNING 2025-07-20 13:26:18,872 basehttp "GET /favicon.ico HTTP/1.1" 404 2386
+INFO 2025-07-20 13:28:37,121 autoreload /code/properties/utils.py changed, reloading.
+INFO 2025-07-20 13:28:37,700 autoreload Watching for file changes with StatReloader
+WARNING 2025-07-20 13:32:26,296 basehttp "GET /favicon.ico HTTP/1.1" 404 2386
+WARNING 2025-07-20 13:33:07,996 basehttp "GET /favicon.ico HTTP/1.1" 404 2386
