@@ -12,4 +12,4 @@ def property_list(request):
     """
     properties = Property.objects.all()
     data = json.loads(serialize('json', properties))
-    return JsonResponse(data, safe=False)
+    return JsonResponse({'properties': data})
