@@ -27,10 +27,17 @@ def get_redis_cache_metrics():
     info = conn.info("stats")
     hits = info.get("keyspace_hits", 0)
     misses = info.get("keyspace_misses", 0)
-    total = hits + misses
-    hit_ratio = hits / total if total else None
-    logger.info(f"'hits': {hits}, 'misses': {misses}, 'hit_ratio': {hit_ratio}")
-    return {"hits": hits, "misses": misses, "hit_ratio": hit_ratio}
+    total_requests = hits + misses
+
+    if total_requests > 0:
+        hit_ratio = hits / total_requests
+        logger.info(f"'hits': {hits}, 'misses': {misses}, 'hit_ratio': {hit_ratio}")
+        return {"hits": hits, "misses": misses, "hit_ratio": hit_ratio}
+    else:
+        hit_ratio = 0
+        logger.error("No requests made to the redis database")
+        return {"hits": hits, "misses": misses, "hit_ratio": hit_ratio}
+
 
 
 
